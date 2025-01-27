@@ -196,7 +196,7 @@ def create_bq_module_dataset(client, dataset_id: str):
     dataset = bigquery.Dataset(dataset_id)
     dataset.location = "US"
 
-    dataset = client.create_dataset(dataset, timeout=120)
+    dataset = client.create_dataset(dataset, timeout=360)
     print(f'Created dataset {client.project}.{dataset.dataset_id}')
 
 
